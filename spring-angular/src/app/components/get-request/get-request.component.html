@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pending Request Details</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-3">Pending Request List</h1>
+
+      <table class="mt-3 table table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>User ID</th>
+            <th>Constituency</th>
+            <th>Passed Status</th>
+            <th>Approved Status</th>
+             <th>Voter Id</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let application of applications">
+            <td>{{ application.userid }}</td>
+            <td>{{ application.constituency }}</td>
+            <td>{{ application.passedstatus }}</td>
+            <td>{{ application.approvedstatus }}</td>
+            <td>{{ application.voterid }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button (click)="onClick()" class="btn btn-danger">LogOut</button>
+    </div>
+  </body>
+</html>

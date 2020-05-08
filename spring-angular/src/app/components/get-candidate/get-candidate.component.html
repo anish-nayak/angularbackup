@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candidate Details</title>
+  </head>
+
+  <body>
+    <div class="container front">
+      <h1 class="mt-3">Candidate Details</h1>
+
+      <table class="mt-3 table table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>CandidateId</th>
+            <th>Name</th>
+            <th>ElectionId</th>
+            <th>PartyId</th>
+            <th>District</th>
+            <th>Constituency</th>
+            <th>Date of birth</th>
+            <th>Mobile No</th>
+            <th>Address</th>
+            <th>EmailId</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let candidate of candidates">
+            <td>{{candidate.candidateid}}</td>
+            <td>{{candidate.name}}</td>
+            <td>{{candidate.electionid}}</td>
+            <td>{{candidate.partyid}}</td>
+            <td>{{candidate.district}}</td>
+            <td>{{candidate.constituency}}</td>
+            <td>{{candidate.mobileno}}</td>
+            <td>{{candidate.address}}</td>
+            <td>{{candidate.emailId}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button (click)="onClick()" class="btn btn-danger">LogOut</button>
+    </div>
+  </body>
+</html>

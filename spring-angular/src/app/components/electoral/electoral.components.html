@@ -1,0 +1,140 @@
+<div class="w3-top">
+	<div class="w3-bar w3-red w3-card w3-padding w3-small">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" ></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+    <a href="" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NOTICE</a>
+    <nav class="navbar navbar-expand-sm navbar-dark w3-red">
+       <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        <a class="nav-link" (click)="onClick()">Logout</a>
+        </li>
+        </ul>
+        </div>
+        </nav>
+   
+    </div></div>
+
+<br><br><br>
+
+<div class="container">
+    <h2 class="jumbotron w3-red"><h2>Electoral Officer: </h2></h2></div>
+    <br> <hr class="line">
+     <div class="container">
+<div class="row">
+    <div class="col-lg-1"></div>
+      <div class="col-lg-1 w3-red" ></div>
+
+            
+            <div class="col-lg-8">
+                <b><i>view vote Request from Admin: </i></b><br>
+                <table class="table table-bordered table-hover" >
+                    <thead class="thead-dark">
+                      <tr class="line">
+                        <th>user Id</th>
+                        <th>contituency</th>
+                        <th>passed Status</th>
+                        <th>Approved Status</th>
+                        <th>Voter Id</th>
+                        <th>Generate</th>
+                        <th>Dismiss</th>
+                      </tr><br> 
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let app of application">
+                          <td>{{app.userid}}</td>
+                          <td>{{app.contituency}}</td>
+                          <td>{{app.passedstatus}}</td>
+                          <td>{{app.approvestatus}}</td>
+                          <td>{{app.Voterid}}</td>
+                          <td><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#generate"> Generate Voterid </a></td>
+                          <td><a href="#" class=" btn btn-danger" data-toggle="modal"data-target="#reject" >Reject</a></td>
+                          
+                        </tr>
+                  </tbody>
+                   
+                </table>
+
+                
+                  <!-- The Modal -->
+                  <div class="modal" id="generate">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Generate Voterid</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                       <button type="button" class = "btn btn-success" (click)="generate()">confirm</button>
+                       <button type="button" class = "btn btn-info">Cancle</button>
+                      </div>
+                      
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                           <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        
+                      </div>
+                    </div>
+               </div>
+              </div>
+               <div class="modal" id="reject">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">Reject  Voterid</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                     <button type="button" class = "btn btn-danger" (click)="delete(userid)">Reject confirm</button>
+                     <button type="button" class = "btn btn-info">Cancle</button>
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                      
+                    </div>
+                  </div>
+                </div></div></div><br>
+
+        <div class="col-lg-1 w3-red"></div>
+        </div><br><br>
+			<div class=" last "><br>
+				 <ul class="nav text-center">
+					    <li class="nav-item ">
+					      <a href="#" class="nav-link" href="#"><pre><b><ul><i>Home </i>  </ul></b></pre></a>
+					    </li>
+					    <li class="nav-item">
+					      <a href="#" class="nav-link" href="#"><pre><b><ul>  <i>About us</i>    </ul></b></pre></a>
+					    </li>
+					    <li class="nav-item">
+					      <a href="#" class="nav-link" href="#"><pre><b><ul>  <i>Find more Options</i>    </ul></b></pre></a>
+					    </li>
+					    <li class="nav-item">
+					      <a href="#" class="nav-link" href="#"><pre><b><ul>  <i>Our Services</i>    </ul></b></pre></a>
+					    </li>
+					  	<li class="nav-item">
+					      <a href="#" class="nav-link" href="#"><pre><b><ul>  <i>Contact us:</i>    </ul></b></pre></a>
+					    </li>
+					  </ul>
+					  
+
+				<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge text-center " >
+				    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+				    <i class="fa fa-instagram w3-hover-opacity"></i>
+				    <i class="fa fa-snapchat w3-hover-opacity"></i>
+				    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+				    <i class="fa fa-twitter w3-hover-opacity"></i>
+				    <i class="fa fa-linkedin w3-hover-opacity"></i>
+				    <p class="w3-medium">Powered by <a href="#" target="_blank" class="w3-hover-text-green">RaviGupta</a></p>
+				  </footer> 
+			</div>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Election Details</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-3">Election Details</h1>
+
+      <table class="mt-3 table table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>Election ID</th>
+            <th>Name</th>
+            <th>Election Date</th>
+            <th>District</th>
+            <th>Constituency</th>
+            <th>Counting Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let election of elections">
+            <th>{{ election.electionid }}</th>
+            <th>{{ election.name }}</th>
+            <th>{{ election.electionDate }}</th>
+            <th>{{ election.district }}</th>
+            <th>{{ election.constituency }}</th>
+            <th>{{ election.countingDate }}</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <button (click)="onClick()" class="btn btn-danger">LogOut</button>
+    </div>
+  </body>
+</html>

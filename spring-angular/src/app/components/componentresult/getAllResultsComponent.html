@@ -1,0 +1,52 @@
+<div >
+
+    <form [formGroup]="resultForm" (ngSubmit)="getRes(session.value)" style="text-align: center;">
+        <div >
+            <label><h4>Sessionid</h4></label>
+            <input type="text" formControlName="Sessionid" #session class="form-control" style="width: 150px; margin: auto;"  > 
+        </div>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btnbtn-primary">Get Results</button>
+    </form>
+</div>
+
+<br><br><br><br>
+
+<table style="margin-left: auto; margin-right: auto;" >
+    <thead>
+        <tr class="text-center"  >
+            <th>Sl.no</th>
+            <th>Election_id</th>
+            <th>Candidate_id</th>
+            <th>VoteCount</th>
+            <th>Result_Status</th>
+    
+        </tr>
+
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let res of results">
+            <td>{{res.serialno}}</td> 
+            <td>{{res.electionId}}</td>
+            <td>{{res.candidateId}}</td>
+            <td>{{res.voteCount}}</td>
+            <td>{{res.resultStatus}}</td>
+
+        </tr>
+    </tbody>
+</table>
+
+<style>
+    table,th,td{
+        border: 1px solid black;
+    }
+    th,td{
+        padding: 20px;
+    }
+</style>
+
+
+
+
+

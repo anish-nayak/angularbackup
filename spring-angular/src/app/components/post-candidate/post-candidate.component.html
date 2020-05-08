@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Candidate</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form (submit)="onSubmit()">
+        <div class="form-group">
+          <label for="candidateid">CANDIDATE ID</label>
+          <input
+            [(ngModel)]="candidateid"
+            name="candidateid"
+            type="number"
+            class="form-control"
+            id="candidateid"
+            placeholder="Candidate id"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="name">NAME:</label>
+          <input
+            [(ngModel)]="name"
+            name="name"
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter candidate name"
+          />
+        </div>
+
+        <div class="form-group">
+            <label for="electionid">Election id</label>
+            <input
+              [(ngModel)]="electionid"
+              name="electionid"
+              type="number"
+              class="form-control"
+              id="electionid"
+              placeholder="Enter electionid"
+            />
+          </div>
+  
+          <div class="form-group">
+              <label for="partyid">Party id</label>
+              <input
+                [(ngModel)]="partyid"
+                name="partyid"
+                type="number"
+                class="form-control"
+                id="partyid"
+                placeholder="Enter partyid"
+              />
+            </div>
+        <div class="form-group">
+          <label for="district">District</label>
+          <input
+            [(ngModel)]="district"
+            name="district"
+            type="text"
+            class="form-control"
+            id="district"
+            placeholder=" Enter District Name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="constituency">Constituency</label>
+          <input
+            [(ngModel)]="constituency"
+            name="constituency"
+            type="text"
+            class="form-control"
+            id="constituency"
+            placeholder="Constituency Name"
+          />
+        </div>
+
+        <div class="form-group">
+            <label for="dateofbirth">DOB</label>
+            <input
+              [(ngModel)]="dateofbirth"
+              name="dateofbirth"
+              type="date"
+              class="form-control"
+              id="dateofbirth"
+              placeholder="YYYY-MM-DD"
+            />
+          </div>
+
+          
+        <div class="form-group">
+            <label for="mobileno">Mobile no</label>
+            <input
+              [(ngModel)]="mobileno"
+              name="mobileno"
+              type="number"
+              class="form-control"
+              id="mobileno"
+              placeholder="Enter 10 digit mobileno"
+            />
+          </div>
+
+   
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input
+              [(ngModel)]="address"
+              name="address"
+              type="text"
+              class="form-control"
+              id="address"
+              placeholder="Enter address"
+            />
+          </div>
+             
+        <div class="form-group">
+            <label for="emailid">Email Id</label>
+            <input
+              [(ngModel)]="emailid"
+              name="emailid"
+              type="email"
+              class="form-control"
+              id="emailid"
+              placeholder="Enter valid  emailid"
+            />
+          </div>
+
+        <button class="btn btn-primary">Add Candidate</button>
+      </form>
+    </div>
+  </body>
+</html>
